@@ -22,7 +22,9 @@ from nltk.corpus import wordnet as wn
 # In[2]:
 
 
-stop_words = stopwords.words('english')
+stop_words = stopwords.words('english') # 영어 불용어 리스트 stop_words에 저장
+
+# extend : 각 데이터가 literal하게 들어감 <-> append : 데이터 그 자체가 들어감
 stop_words.extend(['covid', 'virus', 'https', 'com', 'http', 'que', ' ', 'mierda', 'super', 'new', 'bbmp'])
 shortword = re.compile(r'\W*\b\w{1,2}\b')
 
